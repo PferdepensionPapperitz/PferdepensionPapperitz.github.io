@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="De">
+<head>
+<link rel="icon" href="./hannoveraner.png">
+  <!-- Theme von w3schools - hat kein copyright -->
+  <title>Pferdepension Papperitz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030 ;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #95C11C;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #95C11C;
+      font-size: 50px;
+  }
+  .logo {
+      color: #95C11C;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #95C11C;
+  }
+  .carousel-indicators li {
+      border-color: #95C11C;
+  }
+  .carousel-indicators li.active {
+      background-color: #95C11C;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #95C11C; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #95C11C;
+      background-color: #fff !important;
+      color: #95C11C;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #95C11C !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #95C11C;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #95C11C;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #95C11C !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #95C11C;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Pferdepension Papperitz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">Willkommen</a></li>
+        <li><a href="#services">Allgemein</a></li>
+        <li><a href="#portfolio">Boxen</a></li>
+        <li><a href="#pricing">Preise</a></li>
+        <li><a href="#contact">Kontake</a></li>
+        <li><a href="file:///Users/norbertpapperitz/Desktop/Schule/unterricht%20praxis%20informatik%20Kopie/Impressum.html" target="_blank"  >Impressum</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+<h1><img src="./logo pp.png" width="800" height="400"></h1>
+  <form>
+    <div class="input-group">
+      <!--<input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Subscribe</button>
+      </div>-->
+    </div>
+  </form>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Herzlich Willkommen auf der Pferdepension Papperitz</h2><br>
+      <h4>Unser Hof ...liegt in einem idyllischen Dorf nördlich von Hannover namens Schulenburg.</h4><br>
+      <p>In vergangenen Zeiten betrieben wir Mischtierhaltung und Landwirtschaft. Um die fünfundsiebziger Jahre kamen die ersten Pferde auf unseren Hof. Somit war beschlossen, dass unsere Familie ganz auf Pferdehaltung umstellt. Ziel war und ist es heute noch, eine artgerechte und moderne Pferdehaltung zu betreiben, wo die Pferde ihren Bedürfnissen uneingeschränkt nachgehen können.</p>
+      <p>Die Grundvoraussetzungen wurden durch helle, großzügige Boxen, wo es auch an guter Luft nicht scheitert weitläufige, pferdegerecht eingezäunte Weiden und Winterausläufe geschaffen.</p>
+      <p>Natürlich wurde auch an den Reiter und an die tägliche Arbeit mit seinem Pferd gedacht. Somit wurde ein Reitplatz und ein Longierplatz angelegt, sowie eine Reithalle gebaut. ein kleiner, eingezäunter Sandplatz dient zur Freiheitsdressur. Des Weiteren wurden Putz- und Waschplätze angelegt. Für die Geselligkeit wurde ein Reiterstübchen und ein Grillplatz gebaut.</p>
+      <p>Auch heute noch wird unermütlich geplant und vollbracht (wie die Erschaffung neuer Boxen). Unsere Familie verfügt über eine dreißigjährige Erfahrung in der Pferdehaltung. Durch Sachverstand und einem gesunden Management wurde eine gut funktionierende Pferdepension geschaffen. Dieses natürlich für jede Sparte der Reiterei: Westernreiter, Freizeitreiter und Turnierreiter</p>
+      <p>Selbstverständlich fühlen sich hier nicht nur Reitpferde wohl. Rentnerpferden und jungen Pferden fehlt es hier an nichts.</p>
+      <p>Überzeugen Sie sich selbst! Auf Ihren Besuch freut sich die Pferdepension Papperitz.</p>
+      <br><button  class="btn btn-default btn-lg"> <a href="#contact"> Get in Touch </a> </button>
+    </div>
+    <div class="col-sm-4">
+    <img src="./hof.jpg">
+     
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+    <center>
+      <span class="glyphicon glyphicon-knight logo slideanim"></span>
+      </center>
+    </div>
+    <div class="col-sm-8">  
+      <h2>Auch heute noch wird unermütlich geplant und vollbracht <p>(wie die Erschaffung neuer Boxen).</h2><br>
+      <h4><strong>Unsere Familie verfügt über eine dreißigjährige Erfahrung in der Pferdehaltung.</strong>Durch Sachverstand und einem gesunden Management wurde eine gut funktionierende Pferdepension geschaffen. Dieses natürlich für jede Sparte der Reiterei: Westernreiter, Freizeitreiter und Turnierreiter</p></h4><br>
+      <p><strong>Selbstverständlich fühlen sich hier nicht nur Reitpferde wohl.</strong> Rentnerpferden und jungen Pferden fehlt es hier an nichts.</p>
+      <p><strong>Überzeugen Sie sich selbst!</strong>
+      Auf Ihren Besuch freut sich die <strong>Pferdepension Papperitz.</strong>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid ">
+  <center>
+  <h2>Allgemein</h2>
+  <h4>Was wir anbieten</h4>
+  </center>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+    <center>
+      <span class="glyphicon glyphicon-apple logo-small"></span>
+      <h4>Fütterung:</h4>
+      </center>
+
+      <p>Stroh: Unser Stroh kommt aus eigener Herstellung. Wir verzichten auf unnötige Behandlungen durch Schadstoffe.</p>
+      <p>Stroh dient bei uns nicht nur als Einstreu. Auf Winterausläufe und Weiden wird ebenfalls den Pferden Stroh zur Verfügung gestellt. Die Pferde gehen mit hoher Akzeptanz an unser Futterstroh. Dies dient nicht nur der Beschäftigung. Futterstroh eignet sich hervorragend zur Regulierung der Futteraufnahme. Durch einen hohen Ligninanteil hat das Futter einen geringen Eiweißgehalt und eine gute Verdaulichkeit.</p>
+      <p>Heu: Unser Heu kommt aus eigener Herstellung. Wir verzichten auf unnötige Behandlungen durch Schadstoffe.</p>
+      <p>Erntezeitpunkt erfolgt nach der Grasblüte. Es versteht sich von selbst, dass das Heu von hoher Qualität ist. Heu wird den Pferden morgens und abends in ausreichender Menge zur Verfügung gestellt.</p>
+      <p>Hafer: Unser Hafer kommt ebenfalls aus eigener Herstellung, ist von guter Qualität und zwei Mal gereinigt. Es kann gequetscht oder heil zur Verfügung gestellt werden. Die Kraftfuttergabe erfolgt zwei Mal täglich.</p>
+    </div>
+    <div class="col-sm-4">
+    <center>
+      <span class="glyphicon glyphicon-tree-deciduous logo-small"></span>
+      <h4>Umfeld:</h4>
+      </center>
+      <p>Für ca dreißig Pferde stehen elf ha Sommerweide direkt am Hof zur freien Verfügung. Weitere fünf Hektar sind nur 400 Meter entfernt (ohne Straßenüberquerung). Die Pferde werden in verträglichen Gruppen zusammengestellt.
+      </p>
+      <p>Die Weiden sind großzügig und pferdegerecht eingezunt. Hier kann man auch mal Dampf ablassen oder ein Mittagsschläfchen halten. Man muss nicht erwähnen, dass hier Tränken und Heufutterraufen vorhanden sind.</p>
+      <p>Bei uns befindet sich eine Reithalle mit den Innenmaßen von 21 x 47 Metern. Ausgestattet ist sie mit Spiegeln und automatischer Berieselungsanlage. Somit bleibt der Reiter und das Pferd vom Staub verschont.</p>
+      <p>Weiterhin gibt es: Einen Außenreitplatz mit den Maßen 20 X 60 Meter, Einen Springplatz, einen Rounpen von 15 Meter Durchmesser, einen Longierzirkel und nicht zu vergessen ist ein traumhaftes, weitläufiges Ausreitgelände direkt am Hof.</p>
+    </div>
+    <div class="col-sm-4">
+    <center>
+      <span class="glyphicon glyphicon-knight logo-small"></span>
+      <h4>Zu unseren Reitmöglichkeiten :</h4>
+      </center>
+      <p>Reitplatz
+Größe: Dressurviereck 20 m * 60 m, mit markierten Bahnpunkten
+Qualität des Bodens: Sand mit 30% Lehmanteil und 5 cm eingearbeitete Hackschnitzel (nur Naturprodukte ohne umweltbelastendes Material)
+Außenabgrenzung: Lärchenschwellen 14 cm * 24 cm * 300 cm</p>
+<p> Springplatz
+Größe: 20 m*60 m</p>
+<p>Roundpen: 15 m Durchmesser</p>
+<p>Longgierzirkel: 25 m Durchmesser</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+     <img src="./anlageneu.jpg">
+     <h4>Unsere Führanlage mit Flutlicht</h4>
+    </div>
+    <div class="col-sm-4">
+      <img src="./auslauf.jpg">
+<h4>Unser Dressurviereck mit Flutlicht 20x60m</h4>
+    </div>
+    <div class="col-sm-4">
+      <img src="./reithalle.jpg">
+      <h4>Unsere Reithalle 20x40m</h4>
+  </div>
+</div>
+    </div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Boxen</h2><br>
+  <h4>Pferdeboxen zu vermieten - 32 qm / Box im neu angelegten Paddock-Stall Die ersten Boxen wurden bereits erfolgreich vermietet!<p>
+Die Innenboxen stehen in verschiedenen Größen und Bauarten zur Verfügung. Sie sind mit Selbsttränken und Futtertrog ausgestattet.
+
+
+</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="./Paddock.jpg" alt="Paris" width="400" height="300">
+        <p><strong>Die Paddockboxen</strong></p>
+        <p>Die Fütterung der Paddockboxen erfolgt über einen drei Meter breiten Futtergang; das Heu wird außerhalb der Box gereicht. Somit steht den Pferden ständig sauberes Heu zur Verfügung.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="./Paddock2.jpg" alt="New York" width="400" height="300">
+        <p><strong>Die Paddockboxen</strong></p>
+        <p>Die Paddockboxen verfügen über ein Maß von 3 x 4 Meter. Die Boxentüren sind wahlweise halb oder ganz zu schließen. An der Box grenzt das Paddock mit einem Maß von 3 x 7 Meter Auslauf. Davon sind 3 x 3 Meter überdacht. Sie verfügen über beheizte Selbsttränken, Futtertrog und Lecksteinhalter, sowie hervorragende Licht- und Luftverhältnisse. die Pferde haben zueinander einen durchgängigen Sicht- und Körperkontakt.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="./grünstall.jpg" alt="San Francisco" width="400" height="300">
+        <p><strong>Die Innenboxen</strong></p>
+        <p>Die Innenboxen stehen in verschiedenen Größen und Bauarten zur Verfügung. Sie sind mit Selbsttränken und Futtertrog ausgestattet.</p>
+      </div>
+    </div>
+  </div><br>
+  
+  
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Preise</h2>
+    <h4>Unsere Boxenpreise beginnen ab 180,00 Euro monatlich!</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-left">
+        <div class="panel-heading">
+          <h1>Im Pensionspreis ist enthalten:
+</h1>
+        </div>
+        <div class="panel-body">
+          die Benutzung der gesammten Anlage<p>
+die Bereitstellung von Heu, Stroh, Hafer und Wasser<p>
+2 X tägliche Fütterung<p>
+die Benutzung eines abschließbaren Sattelschrankes<p>
+die Nutzung der Sommerweiden u. Winterausläufe<p>
+        </div>
+        <div class="panel-footer">
+          <h3>Sie erreichen die Pferdepension Papperitz <p>unter:
+0172 - 510 14 37</h3>
+         
+         
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-left">
+        <div class="panel-heading">
+          <h1>Zu genauen Preisangaben</h1>
+        </div>
+        <div class="panel-body">
+          Durch die Vielseitigkeit der angebotenen Boxen bitten wir Sie den genauen Pensionspreis für Ihre gewünschte Box bei uns zu erfragen. Dieses ist bei einem persönlichen Besuch oder telefonisch möglich<p>
+          Wir bitten um Ihr Verständnis, dass an dieser Stelle keine genaueren Angaben gemacht werden können.<p>
+
+Allgemeine Fragen zum Papperitzhof können per E - Mail beantwortet werden; Details erfragen Sie bitte persönlich.<p>
+
+
+        </div>
+        <div class="panel-footer">
+         
+          Die Pferdepension Papperitz freut sich schon jetzt von Ihnen zu hören. Wir verbleiben bis dahin mit freundlichen Grüßen
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-left">
+        <div class="panel-heading">
+          <h1>Reitunterricht wird angeboten durch:</h1>
+        </div>
+        <div class="panel-body">
+         N. Schüller<p>
+Bereiterin FN seit 1995<p>
+Ausbildung vom Remonten bis zur Klasse M.<p>
+Qualifizierter Reitunterricht und Korrekturberitt.<p>
+Tel.: 0152/06790742<p>
+        </div>
+        <div class="panel-footer">
+                    
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<h1>Events</h1> 
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+       <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      <center>
+    <img src="./reittunier.png" alt="tunier" height="500px" width="1000px">
+        </center>
+      </div>
+      <div class="item">
+      <center>
+    <img src="./spring.png" alt="tunier" height="500px" width="1000px">
+    </center>
+      </div>
+      <div class="item">
+       <center>
+    <img src="./event.png" alt="tunier" height="500px" width="1500px">
+    </center>
+      </div>
+      <div class="item">
+       <center>
+    <img src="./sieger.jpg" alt="tunier" height="500px" width="1050px">
+    </center>
+      </div>
+      <div class="item">
+       <center>
+    <img src="./233.jpg" alt="tunier" height="500px" width="800px">
+    </center>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">Kontakte</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Kontaktieren sie uns und wir werden ihnen innerhalb von 24 stunden antworten.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> DE 30855 Langenhagen OT Schulenburg Dorfstr.71</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +49 172/5101437</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>   Pferdepension-Papperitz@gmx.net</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Kommentar" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Senden</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div  style="overflow:hidden;height:600px;width:100%;"><div id="map_canvas" style="height:600px;width:100%;"></div><a href="http://www.maps-einbinden.de">google maps für webseite</a></div><script type="text/javascript">window.setTimeout("initGmaps();",300);function initGmaps(){var myOptions = {zoom:15,center:new google.maps.LatLng(52.44898, 9.676249999999982),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(52.44898, 9.676249999999982)});infowindow = new google.maps.InfoWindow({content: "<b>Pferdepension Papperitz</b><br>Dorfstraße 71<br>30855 Langenhagen"});google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}</script>
+<!--  
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+<!-- google maps code http://www.maps-einbinden.de -->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+ <p>Zurück nach oben </p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
+
